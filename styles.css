@@ -1,0 +1,281 @@
+body {
+  margin: 0px;
+}
+
+header {
+  margin: 60px;
+  margin-bottom: 0px;
+}
+
+main {
+  margin: 60px;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+main h2 {
+  text-align: center;
+}
+p {
+  color: #4f4f50;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Create the diagonal blue section at the top */
+.diagonal-blue-background {
+  /* Use linear gradient to create the diagonal effect */
+  background: linear-gradient(
+    to bottom right,
+    #007bff 49%,
+    rgb(255, 255, 255) 51%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 360px; /* Adjust height as needed */
+  width: 100%;
+  z-index: -1; /* Keeps it behind the content */
+}
+
+footer {
+  /* Set the footer background to blue */
+  background-color: #007bff;
+  width: 100%;
+}
+
+/* small screen */
+
+@media (max-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-text {
+    margin-left: 20px;
+  }
+  .about-me p {
+    color: #4f4f50;
+    font-size: 24px;
+  }
+  .about-me h2 {
+    text-align: center;
+  }
+
+  .section-text h2 {
+    text-align: center;
+  }
+  .phone img {
+    display: none;
+  }
+
+  .email img {
+    display: none;
+  }
+
+  .section-text img {
+    width: 40px;
+  }
+  .socials {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .section-text {
+    font-size: 28px;
+    color: white;
+  }
+  .overlay-text {
+    color: #1cc7e3;
+    font-size: 32px;
+    z-index: 10;
+    top: 204px;
+    left: 25px;
+    position: absolute;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 300px;
+    box-shadow: 5px 5px 5px 5px #cacaca;
+    margin-bottom: 50px;
+  }
+
+  .content-wrapper img {
+    width: 300px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-picture img {
+    width: 100vw;
+    margin-bottom: 0px;
+  }
+}
+
+/* Big screen */
+@media (min-width: 768px) {
+  .section-text {
+    grid-column: 1;
+    color: white;
+    font-size: 32px;
+  }
+  .contact-picture img {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    justify-content: center;
+  }
+  .content-wrapper img {
+    width: 400px;
+  }
+  .content {
+    width: 400px;
+    box-shadow: 5px 5px 5px 5px #cacaca;
+  }
+  .overlay-text {
+    color: #e61010;
+    font-size: 60px;
+    z-index: 10;
+    top: 425px;
+    left: 471px;
+    text-wrap: nowrap;
+
+    position: absolute;
+  }
+  .content-wrapper {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: center;
+  }
+  .about-me {
+    box-shadow: 5px 5px 5px 5px #cacaca;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 800px;
+    flex-shrink: 0;
+  }
+  header {
+    display: flex;
+    margin: 200px;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .socials {
+    align-self: end;
+    margin: 25px;
+  }
+  .about-me-header {
+    margin: 10px;
+    font-size: 42px;
+  }
+  .about-me-text {
+    margin: 20px;
+    font-size: 28px;
+  }
+
+  .section-text img {
+    width: 25px;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials img {
+  width: 40px;
+}
+
+.content-name {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.content-name h3 {
+  font-size: 26px;
+  margin: 10px;
+}
+
+.content-name img {
+  width: 30px;
+  margin: 10px;
+}
+
+.content-wrapper p {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.section-text p {
+  color: white;
+}
+
+.contact-picture {
+  justify-self: end;
+}
+
+.section-text .socials {
+  gap: 40px;
+}
+
+.img-text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 850px) {
+  .content-wrapper {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 50vw 50vw;
+    justify-items: center;
+  }
+
+  .overlay-text {
+    top: -44px;
+    left: 192px;
+  }
+
+  .about-me {
+    width: 630px;
+  }
+  .img-text img {
+    width: 350px;
+    position: absolute;
+    right: -325px;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  .about-me-text {
+    margin-left: 350px;
+  }
+}
