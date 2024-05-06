@@ -21,10 +21,12 @@
         />
       </div>
       <div class="about-me">
-        <h2 class="about-me-header">About me</h2>
+        <img class="tablet-img" src="imgs/me1600.jpg" alt="a picture of me" />
+        <h2 class="about-me-header">&ensp;About me</h2>
+
         <p class="about-me-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+          &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          doss eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
           interdum velit laoreet id donec ultrices tincidunt arcu non. Sapien
           nec sagittis aliquam malesuada bibendum arcu. Vitae tempus quam
           pellentesque nec nam aliquam sem et tortor. Nam at lectus urna duis
@@ -47,6 +49,23 @@
       <div class="content-wrapper">
         <div class="content">
           <img
+            src="imgs/yoimjack_water_679bc6a9-2041-4c4f-8617-d5f73890906c.png"
+            alt="screenshot of project"
+          />
+          <div class="content-name">
+            <h3>Water</h3>
+            <div class="project-links">
+              <a href=""><img src="imgs/github.png" alt="github link" /></a>
+              <a href=""><img src="imgs/share.png" alt="share link" /></a>
+            </div>
+          </div>
+
+          <p>
+            Short description of the project. Just a couple sentences will do.
+          </p>
+        </div>
+        <div class="content">
+          <img
             src="imgs/yoimjack_fire_1eb5d00d-74e0-4a4b-b147-f1125a02bb35.png"
             alt="screenshot of project"
           />
@@ -61,14 +80,13 @@
             Short description of the project. Just a couple sentences will do.
           </p>
         </div>
-
         <div class="content">
           <img
-            src="imgs/yoimjack_metal_2f111053-f1ec-4594-b24e-68ab6dc780b1.png"
+            src="imgs/yoimjack_rock_and_stones_8a481cd4-cbdd-41ed-8799-a2870cba0d21.png"
             alt="screenshot of project"
           />
           <div class="content-name">
-            <h3>Metal</h3>
+            <h3>Earth</h3>
             <div class="project-links">
               <a href=""><img src="imgs/github.png" alt="github link" /></a>
               <a href=""><img src="imgs/share.png" alt="share link" /></a>
@@ -86,7 +104,7 @@
             alt="screenshot of project"
           />
           <div class="content-name">
-            <h3>Wind</h3>
+            <h3>Air</h3>
             <div class="project-links">
               <a href=""><img src="imgs/github.png" alt="github link" /></a>
               <a href=""><img src="imgs/share.png" alt="share link" /></a>
@@ -96,32 +114,13 @@
             Short description of the project. Just a couple sentences will do.
           </p>
         </div>
-
         <div class="content">
           <img
-            src="imgs/yoimjack_water_679bc6a9-2041-4c4f-8617-d5f73890906c.png"
+            src="imgs/yoimjack_realistic_picture_of_space_1219dd0a-429c-4164-b90d-09dadc6facae.png"
             alt="screenshot of project"
           />
           <div class="content-name">
-            <h3>Water</h3>
-            <div class="project-links">
-              <a href=""><img src="imgs/github.png" alt="github link" /></a>
-              <a href=""><img src="imgs/share.png" alt="share link" /></a>
-            </div>
-          </div>
-
-          <p>
-            Short description of the project. Just a couple sentences will do.
-          </p>
-        </div>
-
-        <div class="content">
-          <img
-            src="imgs/yoimjack_realistic_green_leaf_b90888ec-a7ff-46b3-af36-321ca6c85a9b.png"
-            alt="screenshot of project"
-          />
-          <div class="content-name">
-            <h3>Leaf</h3>
+            <h3>Space</h3>
             <div class="project-links">
               <a href=""><img src="imgs/github.png" alt="github link" /></a>
               <a href=""><img src="imgs/share.png" alt="share link" /></a>
@@ -135,11 +134,11 @@
 
         <div class="content">
           <img
-            src="imgs/yoimjack_rock_and_stones_8a481cd4-cbdd-41ed-8799-a2870cba0d21.png"
+            src="imgs/yoimjack_metal_2f111053-f1ec-4594-b24e-68ab6dc780b1.png"
             alt="screenshot of project"
           />
           <div class="content-name">
-            <h3>Rock</h3>
+            <h3>Metal</h3>
             <div class="project-links">
               <a href=""><img src="imgs/github.png" alt="github link" /></a>
               <a href=""><img src="imgs/share.png" alt="share link" /></a>
@@ -179,8 +178,13 @@
         </div>
         <div class="contact-picture">
           <img
-            srcset="img/me2300.jpg 300w, imgs/me2600.jpg 600w"
-            sizes="(max-width:850px) 300px, 
+            srcset="
+              imgs/me2300.jpg     300w,
+              imgs/me2600trim.jpg 294w,
+              imgs/me2600.jpg     600w
+            "
+            sizes="(max-width:767px) 300px, 
+                   (min-width: 768px) and (max-width: 850px) 294px,
           600px"
             src="imgs/me2600.jpg"
             alt="a picture of me"

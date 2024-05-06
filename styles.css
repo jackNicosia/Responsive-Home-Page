@@ -18,6 +18,7 @@ h2 {
 }
 main h2 {
   text-align: center;
+  font-size: 39px;
 }
 p {
   color: #4f4f50;
@@ -26,6 +27,14 @@ p {
 img {
   margin-left: auto;
   margin-right: auto;
+}
+
+.tablet-img {
+  display: none;
+}
+
+.overlay-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Create the diagonal blue section at the top */
@@ -94,12 +103,13 @@ footer {
     color: white;
   }
   .overlay-text {
-    color: #1cc7e3;
-    font-size: 32px;
+    color: #ffffff;
+    font-size: 27px;
     z-index: 10;
-    top: 204px;
+    top: 223px;
     left: 25px;
     position: absolute;
+    text-wrap: nowrap;
   }
 
   .content-wrapper {
@@ -151,14 +161,14 @@ footer {
     box-shadow: 5px 5px 5px 5px #cacaca;
   }
   .overlay-text {
-    color: #e61010;
+    color: #ffffff;
     font-size: 60px;
     z-index: 10;
-    top: 425px;
-    left: 471px;
+    top: 442px;
+    left: 19px;
     text-wrap: nowrap;
-
     position: absolute;
+    text-decoration: underline;
   }
   .content-wrapper {
     display: grid;
@@ -189,7 +199,8 @@ footer {
   }
   .about-me-header {
     margin: 10px;
-    font-size: 42px;
+    margin-left: 20px;
+    font-size: 39px;
   }
   .about-me-text {
     margin: 20px;
@@ -203,7 +214,7 @@ footer {
 
 .socials {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .socials img {
@@ -253,29 +264,69 @@ footer {
   .content-wrapper {
     display: grid;
     flex-direction: column;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 40vw 40vw;
     justify-items: center;
   }
 
   .overlay-text {
     top: -44px;
-    left: 192px;
+    left: 180px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 53px;
   }
 
   .about-me {
-    width: 630px;
+    width: 85vw;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .about-me-text {
+    position: relative;
+    bottom: 67px;
+  }
+
+  .about-me-header {
+    margin-top: 75px;
+    text-align: center;
+    position: relative;
+    bottom: 55px;
+    right: 15px;
   }
   .img-text img {
-    width: 350px;
-    position: absolute;
-    right: -325px;
+    display: none;
   }
 
   .socials {
     display: none;
   }
 
-  .about-me-text {
-    margin-left: 350px;
+  .tablet-img {
+    display: block;
+    float: left;
+    position: relative;
+    bottom: 75px;
+    right: 32px;
+    width: 50%;
+  }
+
+  .diagonal-blue-background {
+    height: 170vw;
+  }
+
+  .content img {
+    width: 285px;
+  }
+
+  .content {
+    width: 285px;
+    margin-bottom: 100px;
+  }
+  .content-name img {
+    width: 30px;
+  }
+  header {
+    margin-bottom: 50px;
   }
 }
