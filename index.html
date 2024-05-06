@@ -177,18 +177,13 @@
           </div>
         </div>
         <div class="contact-picture">
-          <img
-            srcset="
-              imgs/me2300.jpg     300w,
-              imgs/me2600trim.jpg 294w,
-              imgs/me2600.jpg     600w
-            "
-            sizes="(max-width:767px) 300px, 
-                   (min-width: 768px) and (max-width: 850px) 294px,
-          600px"
-            src="imgs/me2600.jpg"
-            alt="a picture of me"
-          />
+     <picture>
+      <source media="(max-width: 767px)" srcset="imgs/me2300.jpg" />
+      <source media="(min-width: 768px) and (max-width: 850px)" srcset="imgs/me2600trim.jpg" />
+      <source media="(min-width 851px)" srcset="imgs/me2600.jpg" />
+      <img src="imgs/me2600.jpg" alt="a picture of jack" />
+     </picture>
+     </picture>
         </div>
       </section>
     </footer>
