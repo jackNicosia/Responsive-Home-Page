@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="diagonal-blue-background"></div>
     <!-- Header -->
-    <header>
-      <div class="diagonal-blue-background"></div>
-      <div class="img-text">
-        <h1 class="overlay-text">Jack Riley-Nicosia</h1>
+    <section class="about-me-section">
+    <div class="information">
+      <div class="img-container">
         <img
           srcset="img/me1300.jpg 300w, imgs/me1600.jpg 600w"
           sizes="(max-width:767px) 300px, 
@@ -19,10 +19,12 @@
           src="imgs/me1600.jpg"
           alt="a picture of Jack"
         />
+        <h1 class="overlay-text">Jack Riley-Nicosia</h1>
       </div>
+
       <div class="about-me">
         <img class="tablet-img" src="imgs/me1600.jpg" alt="a picture of me" />
-        <h2 class="about-me-header">&ensp;About me</h2>
+        <h2 class="about-me-header">About me</h2>
 
         <p class="about-me-text">
           &ensp; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -41,7 +43,8 @@
           <a href=""><img src="imgs/twitter.png" alt="twitter" /></a>
         </div>
       </div>
-    </header>
+    </div>
+    </section>
     <!-- Page content -->
     <main>
       <h2>My work</h2>
@@ -153,7 +156,7 @@
     </main>
     <!-- Footer -->
     <footer>
-      <section>
+      <section class="footer-section">
         <div class="section-text">
           <h2>Contact me</h2>
           <p>
@@ -178,9 +181,9 @@
         </div>
         <div class="contact-picture">
      <picture>
-      <source media="(max-width: 767px)" srcset="imgs/me2300.jpg" />
-      <source media="(min-width: 768px) and (max-width: 850px)" srcset="imgs/me2600trim.jpg" />
-      <source media="(min-width 851px)" srcset="imgs/me2600.jpg" />
+      <source media="(max-width: 767px)" srcset="imgs/me2600.jpg" />
+      <source media="(min-width: 768px) and (max-width: 1199px)" srcset="imgs/me2600trim.jpg" />
+      <source media="(min-width 1200px)" srcset="imgs/me2600.jpg" />
       <img src="imgs/me2600.jpg" alt="a picture of jack" />
      </picture>
      </picture>

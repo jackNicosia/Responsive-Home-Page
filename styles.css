@@ -1,9 +1,22 @@
 body {
-  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  max-width: 2000px;
 }
 
-header {
-  margin: 60px;
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information {
+  margin: auto;
   margin-bottom: 0px;
 }
 
@@ -35,34 +48,38 @@ img {
 
 .overlay-text {
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-wrap: nowrap;
+  position: absolute;
+  top: -0rem;
+  left: 250px;
+  color: white;
 }
 
 /* Create the diagonal blue section at the top */
 .diagonal-blue-background {
-  /* Use linear gradient to create the diagonal effect */
-  background: linear-gradient(
-    to bottom right,
-    #007bff 49%,
-    rgb(255, 255, 255) 51%
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 360px; /* Adjust height as needed */
   width: 100%;
-  z-index: -1; /* Keeps it behind the content */
+  height: 60vh;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  z-index: -1;
+  background-color: #007bff;
+  transform: skewY(-10deg);
+  transform-origin: top left;
 }
 
 footer {
   /* Set the footer background to blue */
   background-color: #007bff;
-  width: 100%;
+  width: 100vw;
 }
 
 /* small screen */
 
 @media (max-width: 767px) {
+  .diagonal-blue-background {
+    height: 315px;
+  }
   body {
     display: flex;
     flex-direction: column;
@@ -106,10 +123,11 @@ footer {
     color: #ffffff;
     font-size: 27px;
     z-index: 10;
-    top: 223px;
-    left: 25px;
+    top: 304px;
+    left: 60px;
     position: absolute;
     text-wrap: nowrap;
+    margin: auto;
   }
 
   .content-wrapper {
@@ -126,7 +144,7 @@ footer {
   .content-wrapper img {
     width: 300px;
   }
-  section {
+  .footer-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,44 +156,68 @@ footer {
 }
 
 /* Big screen */
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+  .footer-section {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .about-me {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    min-width: 520px;
+  }
+  .contact-picture {
+    right: 50px;
+  }
   .section-text {
     grid-column: 1;
     color: white;
     font-size: 32px;
+    margin-left: 20px;
+    text-wrap: balance;
   }
   .contact-picture img {
     margin-bottom: 50px;
     margin-top: 50px;
   }
-  section {
-    display: grid;
-    grid-template-columns: 30vw 60vw;
-    justify-content: center;
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    width: 80vw;
   }
   .content-wrapper img {
-    width: 400px;
+    width: 100%;
   }
   .content {
-    width: 400px;
+    width: 90%;
     box-shadow: 5px 5px 5px 5px #cacaca;
+    margin-bottom: 26px;
   }
   .overlay-text {
     color: #ffffff;
     font-size: 60px;
     z-index: 10;
-    top: 442px;
-    left: 19px;
+    top: auto;
+    left: 50px;
     text-wrap: nowrap;
     position: absolute;
     text-decoration: underline;
+    text-shadow: 1px 1px 5px rgb(62, 62, 62);
   }
   .content-wrapper {
     display: grid;
     gap: 25px;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 25vw);
     justify-content: center;
   }
+
   .about-me {
     box-shadow: 5px 5px 5px 5px #cacaca;
     margin-top: 65px;
@@ -184,14 +226,14 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 800px;
-    flex-shrink: 0;
   }
-  header {
-    display: flex;
-    margin: 200px;
-    margin-top: 50px;
-    justify-content: center;
+  .information {
+    display: grid;
+    width: 100%;
+    padding: 0;
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+    gap: 0px;
   }
   .socials {
     align-self: end;
@@ -209,6 +251,11 @@ footer {
 
   .section-text img {
     width: 25px;
+  }
+  .img-container img {
+    box-shadow: 0px 5px 5px -5px #cacaca;
+    width: 100%;
+    min-width: 560px;
   }
 }
 
@@ -233,7 +280,7 @@ footer {
 }
 
 .content-name img {
-  width: 30px;
+  width: 40px;
   margin: 10px;
 }
 
@@ -248,19 +295,59 @@ footer {
 
 .contact-picture {
   justify-self: end;
+  position: relative;
 }
 
 .section-text .socials {
   gap: 40px;
 }
 
-.img-text {
+.img-container {
+  display: flex;
+  width: 100%;
+  align-items: end;
+  justify-content: end;
   position: relative;
-  display: inline-block;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 850px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer-section {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 1fr;
+    border: 2px solid green;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .section-text {
+    color: white;
+    margin-left: 50px;
+  }
+  .img-container {
+    width: clamp(300px, 64%, 380px);
+    float: left;
+    margin-right: -40px;
+    margin-bottom: -30px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    transform: translateX(-60px) translateY(-100px);
+  }
+  .about-me-section {
+    width: 75%;
+    margin-top: 9rem;
+  }
+  .contact-picture {
+    right: 50px;
+  }
   .content-wrapper {
     display: grid;
     flex-direction: column;
@@ -277,25 +364,24 @@ footer {
   }
 
   .about-me {
-    width: 85vw;
+    width: calc(100%-20px);
     display: block;
-    margin-bottom: 0;
+    box-sizing: border-box;
   }
 
   .about-me-text {
     position: relative;
-    bottom: 67px;
+    bottom: 42px;
+    margin: 10px;
   }
 
   .about-me-header {
     margin-top: 75px;
     text-align: center;
     position: relative;
-    bottom: 55px;
+    top: 11px;
     right: 15px;
-  }
-  .img-text img {
-    display: none;
+    padding-bottom: 30px;
   }
 
   .socials {
@@ -303,16 +389,12 @@ footer {
   }
 
   .tablet-img {
-    display: block;
+    display: none;
     float: left;
     position: relative;
     bottom: 75px;
     right: 32px;
     width: 50%;
-  }
-
-  .diagonal-blue-background {
-    height: 170vw;
   }
 
   .content img {
@@ -322,11 +404,19 @@ footer {
   .content {
     width: 285px;
     margin-bottom: 100px;
+    box-shadow: 5px 5px 5px 5px #cacaca;
   }
   .content-name img {
     width: 30px;
   }
-  header {
+  .information {
     margin-bottom: 50px;
+    background-color: white;
+    font-size: 1.3rem;
+    box-shadow: 5px 5px 5px 5px #cacaca;
+  }
+  .phone img,
+  .email img {
+    width: 30px;
   }
 }
